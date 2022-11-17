@@ -61,19 +61,19 @@ body {
   color: #71778d;
   line-height: 20px;
 }
-.product-price {
+.product__price {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   margin: 1.2em 0;
 }
-.product-price-main {
+.product__price-main {
   margin-right: 1em;
   font-family: "Fraunces", serif;
   font-size: 2.5rem;
   color: #3d8067;
 }
-.product-price-previous {
+.product__price-previous {
   align-self: center;
   color: #71778d;
   text-decoration: line-through;
@@ -125,7 +125,7 @@ body {
   .product-title {
     font-size: 3rem;
   }
-  .product-price-main {
+  .product__price-main {
     font-size: 3rem;
   }
   .product-btn-icon {
@@ -154,10 +154,10 @@ body {
   .product-text {
     line-height: 25px;
   }
-  .product-price {
+  .product__price {
     margin: 1.5em 0;
   }
-  .product-price-main {
+  .product__price-main {
     font-size: 3.2rem;
   }
   .product-btn {
