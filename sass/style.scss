@@ -1,0 +1,218 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.2rem;
+}
+
+// MAIN
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+	background-color: $beige;
+}
+
+// PRODUCT BOX
+.product {
+	&__box {
+		margin: 2em 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 90%;
+		max-width: 400px;
+		font-size: 1.2rem;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: $pure-white;
+
+		&-mobile-img {
+			min-height: 220px;
+			width: 100%;
+		}
+
+		&-info {
+			padding: 1.8em;
+			background-color: $pure-white;
+		}
+	}
+
+	&-item {
+		color: $grey;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+
+	&-title {
+		margin: 0.4em 0;
+		font-family: 'Fraunces', serif;
+		font-size: 2.5rem;
+		font-weight: bold;
+	}
+
+	&-text {
+		color: $grey;
+		line-height: 20px;
+	}
+
+	&-price {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin: 1.2em 0;
+
+		&-main {
+			margin-right: 1em;
+			font-family: 'Fraunces', serif;
+			font-size: 2.5rem;
+			color: $green;
+		}
+
+		&-previous {
+			align-self: center;
+			color: $grey;
+			text-decoration: line-through;
+		}
+	}
+
+	&-btn {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 0.5em 2em;
+		border-radius: 10px;
+		background-color: $green;
+		border: none;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 1.2rem;
+		color: $pure-white;
+		transition: background-color 0.3s;
+		cursor: pointer;
+
+		&-icon {
+			margin-right: 0.5em;
+			align-self: center;
+			width: 12px;
+		}
+
+		&:hover {
+			background-color: $dark-green;
+		}
+	}
+}
+
+// FOOTER
+.footer {
+	margin-top: 0.5em;
+	padding: 1em;
+	font-size: 0.9rem;
+
+	&-link {
+		color: $green;
+	}
+}
+
+// MEDIA
+@media (min-width: 375px) {
+	.footer {
+		font-size: 1.1rem;
+	}
+}
+
+@media (min-width: 414px) {
+	.product {
+		&__box,
+		&-btn {
+			font-size: 1.4rem;
+		}
+
+		&-title {
+			font-size: 3rem;
+		}
+
+		&-price {
+			&-main {
+				font-size: 3rem;
+			}
+		}
+
+		&-btn {
+			&-icon {
+				width: 14px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.product {
+		&__box {
+			margin: 0;
+			flex-direction: row;
+			max-width: 700px;
+			height: 520px;
+			font-size: 1.6rem;
+
+			&-desktop-img,
+			&-info {
+				height: 100%;
+			}
+
+			&-info {
+				max-width: 50%;
+				padding: 2.5em;
+			}
+		}
+
+		&-title {
+			margin: 0.8em 0;
+			font-size: 3.2rem;
+		}
+
+		&-text {
+			line-height: 25px;
+		}
+
+		&-price {
+			margin: 1.5em 0;
+
+			&-main {
+				font-size: 3.2rem;
+			}
+		}
+
+		&-btn {
+			padding: 1em 3em;
+			font-size: 1.6rem;
+
+			&-icon {
+				width: 16px;
+			}
+		}
+	}
+
+	.footer {
+		margin-top: 3em;
+		font-size: 1.2rem;
+	}
+}
